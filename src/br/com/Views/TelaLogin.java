@@ -38,6 +38,7 @@ public class TelaLogin extends javax.swing.JFrame {
     public void logar(){
         String sql = "select * from tbusuarios where login = ? and senha = ?";
         try {
+//            Prepara a conexão com o banco
             pst = conexao.prepareStatement(sql);
             pst.setString(1, txtUsuario.getText());
             pst.setString(2, txtSenha.getText());
